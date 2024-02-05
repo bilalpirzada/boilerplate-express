@@ -35,4 +35,9 @@ app.get("/json", function (req, res) {
   }
 });
 
+app.get("/:word/echo", function (req, res) {
+  var word = req.params.word;
+  res.json({ echo: word });
+});
+
 module.exports = app;
