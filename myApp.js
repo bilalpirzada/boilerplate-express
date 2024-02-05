@@ -40,4 +40,10 @@ app.get("/:word/echo", function (req, res) {
   res.json({ echo: word });
 });
 
+app.get("/name", function (req, res) {
+  var firstname = req.query.first;
+  var lastname = req.query.last;
+  res.json({ name: firstname + " " + lastname });
+});
+
 module.exports = app;
